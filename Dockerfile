@@ -34,3 +34,5 @@ RUN pecl install redis-3.1.0 \
 RUN apt-get update && apt-get install -y wget \
     && wget -q "https://getcomposer.org/installer" -O /tmp/composer-setup.php \
     && php /tmp/composer-setup.php --filename=composer --install-dir=/usr/local/bin
+
+RUN apt-get update && apt-get install -y git
