@@ -30,3 +30,7 @@ RUN apt-get update && apt-get install -y zlib1g-dev \
 RUN pecl install redis-3.1.0 \
     && pecl install xdebug-2.5.0 \
     && docker-php-ext-enable redis xdebug
+
+RUN apt-get update && apt-get install -y wget \
+    && wget -q "https://getcomposer.org/installer" -O /tmp/composer-setup.php \
+    && php /tmp/composer-setup.php --filename=composer --install-dir=/usr/local/bin
