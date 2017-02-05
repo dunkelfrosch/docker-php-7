@@ -13,7 +13,6 @@ ENV TERM xterm \
     DEBIAN_FRONTEND noninteractive \
     TIMEZONE "Europe/Berlin"
 
-# override default image user [jenkins]
 USER root
 
 RUN apt-get update && apt-get install -y \
